@@ -1,4 +1,4 @@
-with open("input","r") as f:
+with open("input.txt","r") as f:
     lines = f.readlines()
 
 measurements = [int(x) for x in lines]

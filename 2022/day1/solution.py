@@ -1,4 +1,4 @@
-with open("input", "r") as f:
+with open("input.txt", "r") as f:
     cals = f.read()
 elves = cals.split("\n\n")
 #print(len(elves))
