@@ -9,24 +9,14 @@ for line in lines:
 	a = line[:half]
 	b = line[half:]
 
-	found = False
 	for x in a:
-		
-		for y in b:
-			if x == y:
-
-				found = True
-
-
-				if x.isupper():
-
-					priorities += 27 + ord(x)-ord('A')
-				else:
-
-					priorities += 1 + ord(x)-ord('a')
-				break
-
-		if found:
+		if x in b:
+			if x.isupper():
+				priorities += 27 + ord(x)-ord('A')
+			else:
+				priorities += 1 + ord(x)-ord('a')
 			break
+
+
 
 print(priorities)

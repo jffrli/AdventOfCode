@@ -18,22 +18,13 @@ for g in groups:
 	found = False
 	
 	for a in g[0]:
-		for b in g[1]:
-			if a == b:
-				for c in g[2]:
-					if c == a:
-						found = True
+		if a in g[1] and a in g[2]:
 
-						if a.isupper():
-							priorities += 27 + ord(a)-ord('A')
-						else:
-							priorities += 1 + ord(a)-ord('a')
+			if a.isupper():
+				priorities += 27 + ord(a)-ord('A')
+			else:
+				priorities += 1 + ord(a)-ord('a')
 
-						break
-			if found:
-				break
-
-		if found:
 			break
 
 print(priorities)
