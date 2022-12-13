@@ -27,10 +27,10 @@ def compare(left, right):
 with open("input.txt", "r") as f:
 	data = [eval(x.strip()) for x in f.readlines() if x.strip()]
 
-total = 0
-for i in range(0,len(data),2):
+data.append([2])
+data.append([6])
 
-	if compare(data[i], data[i+1]) == 1:
-		total += 1 + int(i/2)
+from functools import cmp_to_key
+data = sorted(data, key=cmp_to_key(compare), reverse=True)
 
-print(total)
+print((data.index([2])+1) * (data.index([6])+1))
