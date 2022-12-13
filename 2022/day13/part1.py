@@ -4,6 +4,10 @@ def compare(left, right):
 			left = [left]
 		if not isinstance(right,list):
 			right = [right]
+
+		if len(left) > len(right):
+			return False
+		
 		for i in range(len(left)):
 			if i >= len(right):
 				return False
@@ -19,7 +23,7 @@ with open("input.txt", "r") as f:
 total = 0
 for i in range(0,len(data),2):
 
-	if not compare(data[i], data[i+1]):
+	if compare(data[i], data[i+1]):
 		total += 1 + int(i/2)
 
 print(total)
