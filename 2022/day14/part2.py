@@ -56,5 +56,5 @@ while True:
 
 '''
 for x in grid:
-	print(''.join('.' if y == 0 else '#' if y == 1 else '+' if y == 2 else 'o' for y in x[400:]))
+	print(''.join('.' if y == 0 else '#' if y == 1 else '+' if y == 2 else 'o' for y in x))
 '''
